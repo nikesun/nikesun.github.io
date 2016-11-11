@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>web前端王晓东简历</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <style>
+        * { margin: 0; padding: 0;}
+        body { font: 16px/1.8 "Microsoft Yahei",verdana;}
+
+        /* 右侧导航 */
+        #fullPage-nav { _display: none; font-size: 12px;}
+        #fullPage-nav li { width: 90px; height: 21px; margin: 10px 0 0; vertical-align: middle;}
+        #fullPage-nav li a { float: right; width: 21px; height: 21px; color: #8F9DA4; text-decoration: none; text-align: right; background: url(images/dot.png) 5px 5px no-repeat;}
+        #fullPage-nav li .active { background-position: 0 bottom;}
+        #fullPage-nav span { display: none;}
+        .fullPage-tooltip { float: left; top: 0; margin-right: 5px; font: 12px "Microsoft Yahei"; color: #8F9DA4; line-height: 21px;}
+
+        .section { position: relative; overflow: hidden;}
+        .section .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+        .section .bg img { display: block; width: 100%; height: 100%;}
+
+        .bg11 { position: absolute; bottom: 0; width: 100%; height: 850px; background: url(images/bg11.png) 50% 0 no-repeat; transition: all 1s;}
+        .bg12 { position: absolute; bottom: -392px; width: 100%; height: 392px; opacity: 0; transition: all 1.7s; bottom: 90px\0;}
+        .bg13 { position: absolute; bottom: -377px; width: 100%; height: 377px; background: url(images/bg13.png) 50% 0 no-repeat; transition: all 1s;}
+        .hgroup { position: absolute; width: 554px; height: 176px; left: 50%; top: 25%; margin: 0 0 0 -277px;  -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+        .hgroup h1{text-align: center;}
+        .hgroup h1 a{text-decoration: none;color: #73a9cb;font-size: 40px;}
+        .hgroup h2{color: #ccc;text-align: center;font-size: 34px;}
+        .p11 { position: absolute; left: 50%; top: 50%; width: 600px; margin: 0 0 0 -280px;color: #94a7c6; opacity: 0; transition: all 0.5s;font: 20px/20px "Microsoft YaHei";text-align: center;}
+        .mail { position: absolute; left: 50%; top: -26px; width: 375px; height: 26px; margin-left: -187px;transition: all 1s;}
+        .mail { float: left; height: 26px; text-indent: -9999px;}
+        .mail-163 { float: left; width: 107px;}
+        .mail-126 { float: left;width: 108px; margin-left: 23px;}
+        .mail-yeah { float: right; width: 115px;}
+
+        .bg21 { position: absolute; left: 50%; bottom: 15%; width: 819px; height: 250px; margin-left: -608px; margin-bottom: 40px; background: url(images/bg21.png) 0 0 no-repeat; transition: all 1s;  opacity: 0; margin-left: -1108px;}
+        .bg22 { position: absolute; left: 50%; bottom: 15%; width: 819px; height: 299px; margin-left: -280px; margin-bottom: 70px; background: url(images/bg22.png) right 0 no-repeat; transition: all 1s; opacity: 0; margin-left: 320px;}
+        .bg23 { position: absolute; left: 50%; bottom: 15%; width: 819px; height: 400px; margin-left: -409px;transition: all 1s;background: rgba(0,0,0,.1);}
+        .section strong { position: absolute; left: 50%; top: 15%;width: 512px; height: 45px; margin-left: -310px; font-size: 30px; font-weight: 500; color:#73a9cb; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+        .section .info {color: #fff;font-size: 26px; position: absolute; left: 50%; top: 15%; margin-left: -601px; margin-top: 60px; background-repeat: no-repeat; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+        .section .info div{float: left;margin-right: 50px;}
+        .section .info div img{width: 250px;height: 200px;}
+        .p1 { position: absolute; left: 50%; top: 15%; width: 510px; margin-left: -255px; margin-top: 70px; font-size: 16px; color:rgba(0,0,0,.7); opacity: 0; transition: all 1s;}
+
+        /*.section2 h3 { background-image: url(images/t2.png);}*/
+        .section3 h3 { background-image: url(images/t3.png);}
+        .section4 h3 { background-image: url(images/t4.png);}
+        .section5 h3 { background-image: url(images/t5.png);}
+        .section6 strong { width: 561px; margin-left: -280px;}
+        .section6 h3 { width: 561px; margin-left: -280px; background-image: url(images/t6.png);}
+        .section7 strong { width: 561px; margin-left: -280px;}
+        .section7 h3 { width: 561px; margin-left: -280px; background-image: url(images/t7.png);}
+        .section8 strong { width: 561px; margin-left: -280px;}
+        .section8 h3 { width: 561px; margin-left: -280px; background-image: url(images/t8.png);}
+        .section9 strong { width: 609px; margin-left: -304px;}
+        .section9 h3 { width: 609px; margin-left: -304px; background-image: url(images/t9.png);}
+        .section9 h3 span { position: absolute; left: -100px; top: -48px; width: 89px; height: 90px; background-image: url(images/yixin.png);}
+
+        .bg31 { position: absolute; left: 50%; bottom: 0; width: 892px; height: 472px; margin-left: -396px; margin-bottom: 80px; background-image: url(images/bg31.png); opacity: 0; transition: all 1s;}
+        .bg32 { position: absolute; left: 50%; bottom: 0; width: 892px; height: 472px; margin-left: -396px; background: url(images/bg32.png) 470px bottom no-repeat; opacity: 0; transition: all 1s;}
+        .bg33 { position: absolute; left: 50%; bottom: 0; width: 441px; height: 380px; margin-left: 50%; background: url(images/bg33.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
+        .p3 { position: absolute; width: 650px; left: 50%; top: 15%; margin-top: 70px; margin-left: -100%; color: #FFFDE1; opacity: 0; transition: all 1s;font-size: 20px;}
+        .p3 li{list-style: none;}
+
+        .bg41 { position: absolute; bottom: -372px; width: 100%; height: 372px; background: url(images/bg41.png) 50% 0 no-repeat; transition: all 1s;}
+        .bg42 { position: absolute; bottom: -449px; width: 100%; height: 449px; background: url(images/bg42.png) 50% 0 no-repeat; transition: all 1s;}
+        .bg43 { position: absolute; bottom: -449px; width: 100%; height: 449px; margin-bottom: -130px; background: url(images/bg43.png) 50% 0 no-repeat; transition: all 1s;}
+
+        .bg51, .bg52, .bg53, .bg54 { position: absolute; z-index: 1; width: 208px; left: 50%; bottom: 20%; padding-top: 210px; color: #fff;}
+        .section5 h4 { margin-bottom: 12px; font-size: 23px; font-weight: 500;}
+        .section5 p { font-size: 14px;}
+        .bg51 { margin-left: -851px; background: url(images/bg51.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+        .bg52 { margin-left: -403px; background: url(images/bg52.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+        .bg53 { margin-left: 195px; background: url(images/bg53.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+        .bg54 { margin-left: 645px; background: url(images/bg54.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+
+        .bg61 { position: absolute; top: -454px; width: 100%; height: 545px; background: url(images/bg61.png) 50% 0 no-repeat; transition: all 1s;}
+        .bg62 { position: absolute; left: 10%; bottom: 20%; width: 597px; height: 284px; margin-left: -507px; background-image: url(images/bg62.png); transition: all 1s;}
+        .txt6 { position: absolute; left: 90%; bottom: 20%; width: 447px; margin-left: 90px; opacity: 0; transition: all 1s;}
+        .txt6 p { margin-bottom: 17px; color: #5C7970;}
+
+        .bg71 { position: absolute; left: 50%; bottom: -201px; width: 699px; height: 201px; margin-left: -630px; background: url(images/bg71.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+        .bg72 { position: absolute; left: 50%; bottom: -206px; width: 182px; height: 206px; margin-left: -170px;opacity: 0; transition: all 1s;}
+        .bg73 { position: absolute; left: 50%; bottom: 170px; width: 651px; height: 231px; margin-left: -530px; background: url(images/bg73.png) 50% 0 no-repeat;}
+        .bg74 { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%;}
+        .bg74 img { position: absolute; left: 0; bottom: 0; width: 100%; height: 251px;}
+        .txt7 { position: absolute; left: 50%; bottom: -150px; width: 420px; margin-left: 100px; opacity: 0; transition: all 1s;}
+        .txt7 p { margin-bottom: 17px; color: #EAEFF2;}
+
+        .bg81 { position: absolute; width: 100%; bottom: 100px; height: 215px; background: url(images/bg81.png) 50% 0 no-repeat;}
+        .bg82 { position: absolute; left: 50%; bottom: 160px; width: 164px; height: 117px; margin-left: -180px; background-image: url(images/bg82.png); opacity: 0; transition: all 1s;}
+        .bg83 { position: absolute; left: 50%; bottom: 280px; width: 70px; height: 29px; margin-left: -330px; background-image: url(images/bg83.png); opacity: 0; transition: all 1s;}
+        .bg84 { position: absolute; left: 50%; bottom: 320px; width: 43px; height: 26px; margin-left: -410px; background-image: url(images/bg84.png); opacity: 0; transition: all 1s;}
+        .p8 { position: absolute; left: 50%; top: 15%; width: 565px; margin-left: -282px; margin-top: 130px; font-size: 16px; color: #727F8C; opacity: 0; transition: all 1s;}
+
+        .bg91, .bg92, .bg93 { padding-top: 350px; font-size: 16px; color: #fff;}
+        .bg91 { position: absolute; left: 50%; bottom: 15%; width: 340px; margin-left: -970px; background: url(images/bg91.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
+        .bg91 p { position: relative; left: 20px; margin-left: 40px; border-right: 1px solid #13AB86;}
+        .bg92 { position: absolute; left: 50%; bottom: 15%; width: 340px; margin-left: -180px; background: url(images/bg92.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+        .bg92 p { position: relative; left: 40px; margin-left: 30px;}
+        .bg93 { position: absolute; left: 50%; bottom: 30%; width: 340px; margin-left: 630px;opacity: 0; transition: all 1s;}
+        .bg93 p { position: relative; left: -20px; padding-left: 30px; border-left: 1px solid #13AB86;}
+
+        .bg101 { position: absolute; width: 100%; height: 100%; background: url(images/bg101.png) 50% 20% no-repeat;}
+        .bg102 { position: absolute; width: 100%; top: 25%; height: 79px;opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+        .bg102 h1{color: #ffb400; text-align: center;font-size: 40px;}
+        .bg103 { position: absolute; width: 100%; top: 25%; height: 37px; margin-top: 110px;opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+        .bg103 p{color: #fff;width: 543px;  margin: 0 auto;  font: 22px/30px " Microsoft YaHei";}
+        .go { position: absolute; left: 50%; top: 55%; width: 254px; height: 70px; margin-top: 220px; margin-left: -127px;transition: all 1s;background: #ffb400;font: 30px/70px "Microsoft YaHei";text-align: center;color: #fff;text-decoration: none;}
+
+
+        .copyright { position: absolute; left: 0; bottom: 20px; width: 100%; text-align: center; font-size: 0;}
+        .copyright a, .copyright span { margin: 0 7px; font-size: 12px; color: #a0a0a0;}
+
+        /* CSS3过度及动画 */
+        .active strong, .active h3 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+        .active .p1 { opacity: 1; transition-delay: 1.7s;}
+
+        .active .bg12 { bottom: 90px; opacity: 1; transition-delay: 0.7s; }
+        .active .bg13 { bottom: 0; opacity: 1; transition-delay: 0.7s;}
+        .active .hgroup { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+        .active .mail { top: 25px; transition-delay: 0.7s;}
+        .active .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+
+        .active .bg21 { opacity: 1; margin-left: -608px; transition-delay: 0.7s;}
+        .active .bg23 { bottom: 15%; transition-delay: 0.7s;}
+        .active .bg22 { margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+
+        .active .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg31, .active .bg32 { opacity: 1; transition-delay: 1s;}
+        .active .bg33 { margin-left: -120px; opacity: 1; transition-delay: 0.7s;}
+
+        .active .bg41 { bottom: 15%; transition-delay: 0.7s;}
+        .active .bg42 { bottom: 15%; transition-delay: 1.1s;}
+        .active .bg43 { bottom: 15%; transition-delay: 0.9s;}
+
+        .active .bg51 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg53 { margin-left: 45px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg54 { margin-left: 345px; opacity: 1; transition-delay: 0.7s;}
+
+        .active .bg61 { top: 0; transition-delay: 0.7s;}
+        .active .bg62 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+        .active .txt6 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+
+        .active .bg71 { bottom: 250px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg72 { bottom: 350px; opacity: 1; transition-delay: 0.9s;}
+        .active .txt7 { bottom: 200px; opacity: 1; transition-delay: 1.1s;}
+
+        .active .bg82 { bottom: 260px; margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg83 { bottom: 380px; margin-left: -430px; opacity: 1; transition-delay: 1s;}
+        .active .bg84 { bottom: 420px; margin-left: -510px; opacity: 1; transition-delay: 1.2s;}
+        .active .p8 { opacity: 1; transition-delay: 1.7s;}
+
+        .active .bg91 { margin-left: -570px; opacity: 1; transition-delay: 0.7s;}
+        .active .bg92 { opacity: 1; transition-delay: 0.8s;}
+        .active .bg93 { margin-left: 230px; opacity: 1; transition-delay: 0.7s;}
+
+        .active .bg102, .active .bg103 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+        .active .go { top: 25%; opacity: 1; transition-delay: 1.2s;}
+
+        /* for lt ie 10 */
+        .ltie10 strong, .ltie10 h3 { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+        .ltie10 .p1 { opacity: 1; transition-delay: 1.7s;}
+
+        .ltie10 .bg12 { bottom: 90px; opacity: 1; transition-delay: 0.7s; }
+        .ltie10 .bg13 { bottom: 0; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .hgroup { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+        .ltie10 .mail { top: 25px; transition-delay: 0.7s;}
+        .ltie10 .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+
+        .ltie10 .bg21 { opacity: 1; margin-left: -608px; transition-delay: 0.7s;}
+        .ltie10 .bg23 { bottom: 15%; transition-delay: 0.7s;}
+        .ltie10 .bg22 { margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+
+        .ltie10 .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg31, .ltie10 .bg32 { opacity: 1; transition-delay: 1s;}
+        .ltie10 .bg33 { margin-left: -120px; opacity: 1; transition-delay: 0.7s;}
+
+        .ltie10 .bg41 { bottom: 15%; transition-delay: 0.7s;}
+        .ltie10 .bg42 { bottom: 15%; transition-delay: 1.1s;}
+        .ltie10 .bg43 { bottom: 15%; transition-delay: 0.9s;}
+
+        .ltie10 .bg51 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg53 { margin-left: 45px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg54 { margin-left: 345px; opacity: 1; transition-delay: 0.7s;}
+
+        .ltie10 .bg61 { top: 0; transition-delay: 0.7s;}
+        .ltie10 .bg62 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .txt6 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+
+        .ltie10 .bg71 { bottom: 250px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg72 { bottom: 350px; opacity: 1; transition-delay: 0.9s;}
+        .ltie10 .txt7 { bottom: 420px; opacity: 1; transition-delay: 1.1s;}
+
+        .ltie10 .bg82 { bottom: 260px; margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg83 { bottom: 380px; margin-left: -430px; opacity: 1; transition-delay: 1s;}
+        .ltie10 .bg84 { bottom: 420px; margin-left: -510px; opacity: 1; transition-delay: 1.2s;}
+        .ltie10 .p8 { opacity: 1; transition-delay: 1.7s;}
+
+        .ltie10 .bg91 { margin-left: -570px; opacity: 1; transition-delay: 0.7s;}
+        .ltie10 .bg92 { opacity: 1; transition-delay: 0.8s;}
+        .ltie10 .bg93 { margin-left: 230px; opacity: 1; transition-delay: 0.7s;}
+
+        .ltie10 .bg102, .ltie10 .bg103 { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+        .ltie10 .go { top: 25%; opacity: 1; transform:scale(1, 1); transition-delay: 1.2s;}
+    </style>
+    <script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://www.dowebok.com/demo/2014/77/js/jquery.fullPage.min.js"></script>
+    <script>
+        $(function(){
+            if($.browser.msie && $.browser.version < 10){
+                $('body').addClass('ltie10');
+            }
+            $.fn.fullpage({
+                verticalCentered: false,
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+                navigation: true,
+                navigationTooltips: ['首页', '基本信息', '技能', '工作经验', '项目1', '项目2', '项目3', '项目4', '奖励', '自我评价']
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div class="section section1">
+    <div class="bg"><img src="images/01.jpg" alt=""></div>
+    <div class="bg11"></div>
+    <div class="bg12"></div>
+    <div class="bg13"></div>
+    <div class="mail">
+        <a class="mail-163" href="http://www.dowebok.com/">163邮箱</a>
+        <a class="mail-126" href="http://www.dowebok.com/">126邮箱</a>
+        <a class="mail-yeah" href="http://www.dowebok.com/">yeah邮箱</a>
+    </div>
+    <div class="hgroup">
+        <h1><a href="http://www.dowebok.com/">web前端工程师简历</a></h1>
+        <h2>王晓东</h2>
+    </div>
+    <p class="p11">三人行必有我师，学无止境。</p>
+</div>
+
+<div class="section section2">
+    <div class="bg"><img src="images/2.jpg" alt=""></div>
+    <div class="bg21"></div>
+    <div class="bg22"></div>
+    <div class="bg23"></div>
+    <strong>个人资料</strong>
+    <div class="info">
+        <div class="">
+            <img src="./images/glass.png" alt="">
+            <h2>基本信息</h2>
+            <p>
+                姓名:王晓东 女
+                <br>
+                年龄: 23岁 籍贯：湖北
+            </p>
+        </div>
+        <div class="">
+            <img src="./images/hat.png" alt="">
+            <h2>所在院校</h2>
+            <p>
+                武汉软件工程职业学院
+            </p>
+
+        </div>
+        <div class="">
+            <img src="./images/book.png" alt="">
+            <h2>学历和专业</h2>
+            <p>
+                包装技术与设计 专科
+                <br>
+                专业技能
+            </p>
+        </div>
+        <div class="">
+            <img src="./images/tel.png" alt="">
+            <h2>联系方式</h2>
+            <p>
+                邮箱 godasvip@126.com
+                <br>
+                电话18334740786
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+   <!-- <p class="p1">秉承网易邮箱经典的清新简洁的设计风格，邮箱 6.0 版带来全新一代的设计理念，更追求极致唯美的视觉设计、传承更多人文和艺术底蕴，华丽蜕变，带来更舒服更爽心悦目的视觉享受。</p>-->
+</div>
+
+<div class="section section3">
+    <div class="bg"><img src="images/section3.jpg" alt=""></div>
+    <div class="bg31"></div>
+    <div class="bg32"></div>
+    <div class="bg33"></div>
+    <strong>专业技能</strong>
+    <!--<h3>心随眼动，感官直接体验</h3>-->
+    <ul class="p3">
+        <li>1.熟练掌握Html，Div+Css布局，熟悉Html5和Css3新特性；</li>
+        <li>2.熟练掌握JavaScript和DOM操作，以及ajax交互；</li>
+        <li>3.熟练掌握jQuery，能熟练使用jQuery的ajax交互工具，选择器，事件，动画等；</li>
+        <li>4.熟练掌握Bootstrap，使用table表单，form表单，btn，以及一些js组件;</li>
+        <li>5.熟练掌握Swiper flexslider等框架插件；</li>
+        <li>6.掌握Canvas使用；</li>
+        <li>7.掌握AngularJs，熟练使用$http交互，ng-repeat，ng-if，ngRouter等指令；</li>
+        <li>8.熟悉PHP+MySql实现服务器数据库到前端的交互；</li>
+        <li>9.了解NodeJs,ReactJs等框架；</li>
+    </ul>
+</div>
+
+<div class="section section4">
+    <div class="bg"><img src="images/section4.jpg" alt=""></div>
+    <div class="bg41"></div>
+    <div class="bg42"></div>
+    <div class="bg43"></div>
+    <strong>工作经历</strong>
+    <!--<h3>美轮美奂，百变尽随你心</h3>-->
+    <div class="p1">
+        2015.6-2016.8 <br/>
+        武汉深思度网络科技有限公司<br/>
+        web前端工程师 <br/>
+        <h2>工作内容</h2>
+        <ul>
+            <li>1.负责网站Web前端页面开发制作；</li>
+            <li>2.使用JS,Ajax实现前后端交互，确保代码有效对接，优化网站前端性能；</li>
+            <li>3.对项目代码进行维护整理，并优化；</li>
+            <li>4.使用Html5+Css3+JS开发Mobile前端页面；</li>
+            <li>5.网站建设。</li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="section section5">
+    <div class="bg"><img src="images/section5.jpg" alt=""></div>
+    <strong>案例</strong>
+   <!-- <h3>灵活机变，全面为你而生</h3>-->
+    <div class="bg51">
+        <h4>新语音视频邮件</h4>
+        <p>写信不再枯燥！在线录制和播放声音和视频邮件，比单纯的文字邮件更感性、更方便，更好玩。</p>
+    </div>
+    <div class="bg52">
+        <h4>虚拟场景写信模式</h4>
+        <p>写信可以选择自己喜欢的场景，配合美妙的背景音乐，让写信<br>变得更为有趣和生动。</p>
+    </div>
+    <div class="bg53">
+        <h4>独创智能体检</h4>
+        <p>网易邮箱6.0版帮你关注邮箱安全，提醒你及时清理邮件，打<br>造轻量级邮箱。</p>
+    </div>
+    <div class="bg54">
+        <h4>全新多帐号关联</h4>
+        <p>一键关联和切换多个网易邮箱，同时对于重要的邮箱帐号进行<br>密码验证保护。</p>
+    </div>
+</div>
+
+<div class="section section6">
+    <div class="bg"><img src="images/section6.jpg" alt=""></div>
+    <div class="bg61"></div>
+    <div class="bg62"></div>
+    <strong>项目1:至和国际</strong>
+    <!--<h3>办公利器，工作更高效顺手</h3>-->
+    <div class="txt6">
+        <p>开发环境：WebStorm <br/>
+            使用技术：<br/> Div+Css JavaScript JQuery  Html5+Css3  ajax  flexslider
+        </p>
+        <p>项目描述：<br/> 一家汽车连锁公司网站，集汽车改装、改装技术服务及汽车改装件研发生产销售于一体，致力给客户爱车更好的服务体验。</p>
+        <p>负责模块：<br/>
+            1.制作PC端页面基本布局和样式；<br/>
+            2.运用CSS3和JQuery，flexslider实现动态页面效果。</p>
+        <p>网址：http://www.zhihe-int.com/</p>
+    </div>
+</div>
+
+<div class="section section7">
+    <div class="bg"><img src="images/section7.jpg" alt=""></div>
+    <div class="bg71"></div>
+    <div class="bg72"></div>
+    <div class="bg73"></div>
+    <strong>项目2：美美互动</strong>
+    <!--<h3>一目了然，来往邮件更清晰</h3>-->
+    <div class="txt7">
+        <p>开发环境：WebStorm</p>
+        <p>使用技术：AngularJs  Div+Css JavaScript  Html5+Css3  ajax Swiper</p>
+        <p>项目描述：<br/> 该网站是以移动互联网为主攻方向的创新型互联网公司网站，以棋牌游戏为
+            基础、以网络秀场平台、动漫影视众筹为支撑，致力打造出以移动互联网“粉丝经济”    为业务核心的业务生态链</p>
+        <p>负责模块：<br/>
+            1.运用CSS3和JQuery实现动态页面效果；
+            2.开发Mobile前端页面。
+        </p>
+    </div>
+    <div class="bg74"><img src="images/bg74.png" alt=""></div>
+</div>
+
+<div class="section section8">
+    <div class="bg"><img src="images/section8.jpg" alt=""></div>
+    <div class="bg81"></div>
+    <div class="bg82"></div>
+    <div class="bg83"></div>
+    <div class="bg84"></div>
+    <strong>项目3：蓝莓派</strong>
+  <!--  <h3>厚积薄发，大幅度提速创新标</h3>-->
+    <p class="p8">开发环境：WebStorm，Sublime <br/>
+    使用技术：Div+Css JavaScript  Ajax  Swiper  MySql+php AngularJs <br/>
+    项目描述：一种现代化的社区交流网站，用户可以浏览发表文章，听音乐，摄影交流。 <br/>
+   负责模块：<br/>
+        1.使用AngularJs框架，实现单页面加载，局部刷新，减少请求；<br/>
+        2.页面数据都是通过JavaScript和JQuery动态创建的DOM；<br/>
+        3.用户注册和登录，页面数据都是利用 PHP+MySql拿到的动态数据 <br/>
+    </p>
+</div>
+
+<div class="section section9">
+    <div class="bg"><img src="images/section9.jpg" alt=""></div>
+    <strong>项目4：天融钱包</strong>
+    <h3><span></span>沟通无界，连接易信无缝整合</h3>
+    <div class="bg91">
+        <p>项目描述：一种快捷支付的平台，用户可以随时消费支付和转出，帮您轻松管理资产。</p>
+    </div>
+    <div class="bg92">
+        <p>开发环境：WebStorm，Sublime <br/>
+            使用技术：Div+Css JavaScript Ajax Swiper  MySql+php  AngularJs </p>
+    </div>
+    <div class="bg93">
+        <p>负责模块：<br/>
+            1.网站使用AngularJs框架，实现单页面加载，局部刷新，减少请求；<br/>
+            2.使用PHP+MySql，根据用户操作获取或更改数据库数据然后适配；<br/>
+            3.用户注册和登录，根据用户操作实现数据库数据的更改。</p>
+    </div>
+</div>
+
+<div class="section section10">
+    <div class="bg"><img src="images/section10.jpg" alt=""></div>
+    <div class="bg101"></div>
+    <div class="bg102">
+        <h1>自我评价</h1>
+    </div>
+    <div class="bg103">
+        <p>热爱web前端，自学能力强，做事喜欢规划，总结和思考，有强烈的团队意识。
+            乐观踏实，希望在未来一年内成为一名专业的前端开发工程师。</p>
+    </div>
+    <a class="go" href="#">联系</a>
+    <!--<p class="copyright">
+        <a href="javascript:">关于网易</a>
+        <a href="javascript:">关于网易免费邮</a>
+        <a href="javascript:">邮箱官方博客</a>
+        <a href="javascript:">客户服务</a>
+        <a href="javascript:">隐私政策</a>
+        <span>|</span>
+        <span>网易公司版权所有 © 1997-2014 </span>
+    </p>-->
+</div>
+</body>
+<script>
+    function lx(){
+        //基本信息
+        $(".info h2").hover(function(){
+                    $(this).stop().animate({
+                        color:"#748A9E"
+                    },"1s");
+                },
+                function(){
+                    $(this).stop().animate({
+                        color:"#fff"
+                    },"1s");
+                });
+        $(".info div").stop().hover(function(){
+            $(this).stop().animate({
+                marginTop:"-60px"
+            },"1s");
+        },function(){
+            $(this).stop().animate({
+                marginTop:0
+            },"1s");
+        });
+        //联系
+        $(".go").hover(function(){
+                    $(this).stop().animate("1s",function(){
+                        $(this).text(15026446690);
+                    });
+        },
+        function(){
+            $(this).stop().animate("1s",function(){
+                $(this).text("联系");
+            });
+        });
+
+
+    }
+    lx();
+</script>
+</html>
