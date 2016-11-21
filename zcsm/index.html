@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width"
+          name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <link href="img/icon.png" rel="shortcut icon bookmark">
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/zc.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <title>智晨上门</title>
+    <script src="js/jquery-2.2.3.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/zc.js"></script>
+    <!--<script src="js/qianggou.js"></script>-->
+</head>
+<body>
+<div class="container">
+    <div class="swiper-container" id="swiper-container1">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="swper1img" src="img/l1.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img class="swper1img" src="img/l2.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img class="swper1img" src="img/l3.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img class="swper1img" src="img/l4.jpg">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="loction">
+        <div class="dwbox">
+            <i class="dwimg"></i>
+        </div>
+        <div class="dwtextbox1">
+            <div class="dwtextbox">
+                <p class="dwtext">西三旗建材城西路</p>
+                <i class="dwicon">&or;</i>
+            </div>
+        </div>
+    </div>
+
+    <div class="ballNum4">
+        <a href="#"><img src="img/ball1.png" alt=""/>超市生鲜</a>
+        <a href="#"><img src="img/ball2.png" alt=""/>外卖美食</a>
+        <a href="#"><img src="img/ball3.png" alt=""/>鲜花蛋糕</a>
+        <a href="#"><img src="img/ball4.png" alt=""/>上门服务</a>
+        <a href="#"><img src="img/ball5.png" alt=""/>医药健康</a>
+    </div>
+
+    <div class="banner2">
+        <img src="img/l21.jpg" alt=""/>
+    </div>
+
+    <div class="triple">
+        <div class="miaoSha num1 tl">
+            <a href="qianggou.html">
+                <span class="bt3">
+                    <i class="triple-icon3 num1-1"></i>
+                    限时秒杀
+                </span>
+                <b class="time">
+                    <i></i>
+                    :
+                    <i></i>
+                    :
+                    <i></i>
+                </b>
+                <span class="banner3">
+                    <img src="img/shop1.jpg" alt=""/>
+                    <img src="img/shop2.jpg" alt=""/>
+                    <img src="img/shop3.jpg" alt=""/>
+                </span>
+            </a>
+        </div>
+        <div class="conmon num2 tl">
+            <a href="#">
+                <span class="bt1">
+                    <i class="triple-icon3 num2-1"></i>
+                    品质生鲜
+                </span>
+                <span class="tq">天天特价购</span>
+                <img src="img/shop4.png" alt=""/>
+            </a>
+        </div>
+        <div class="conmon num3 tl">
+            <a href="#">
+                <span class="bt2">
+                    <i class="triple-icon3 num3-1"></i>
+                    商家优惠
+                </span>
+                <span class="tq"></span>
+                <img src="img/shop5.png" alt=""/>
+            </a>
+        </div>
+    </div>
+
+    <div class="b7">
+        <div class="b8">
+            <a href="#">
+                <p class="pc1">永辉超市</p>
+                <span>新鲜绿色优享</span>
+                <img src="img/yonghui.png" alt=""/>
+            </a>
+            <a href="#">
+                <p class="pc2">1元抢购</p>
+                <span>全场1元起</span>
+                <img src="img/yiyuan.png" alt=""/>
+            </a>
+        </div>
+    </div>
+
+    <div class="nearshop">
+            <span>
+                <i class="nsi"></i>
+                附近的商家
+            </span>
+    </div>
+
+    <ul class="shoplist">
+        <li class="shopli" data-shopid="0">
+            <div class="br">
+                <img class="bl" src="">
+
+                <div class="bm">
+                    <h2></h2>
+
+                    <div>
+                        <p class="bn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </p>
+                    </div>
+                    <p class="cb"></p>
+                </div>
+                <div class="bs">
+                    <span class="d4"></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <footer class="k index">
+        <a class="index" href="index.html">首页</a>
+        <a class="homeCategorySearch" href="homecategorysearch.html">分类</a>
+        <a class="cartList" href="cartList.html">购物车</a>
+        <a class="orderList" href="orderList.html">订单</a>
+        <a class="mine" href="mine.html">我的</a>
+    </footer>
+</div>
+
+<script>
+
+    var mySwiper1 = new Swiper('#swiper-container1', {
+        pagination: '.swiper-pagination',
+        autoplay: 2000,
+        speed: 1000,
+        autoplayDisableOnInteraction: false,
+        loop: true
+    });
+
+    var mySwiper2 = new Swiper('#swiper-container2', {
+//        pagination: '.swiper-pagination',
+        loop: true,
+        noSwiping: true
+    });
+    mySwiper2.params.autoplay = false;
+
+
+</script>
+</body>
+</html>

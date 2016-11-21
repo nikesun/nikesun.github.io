@@ -1,0 +1,461 @@
+.swiper-slide{
+    width: 100%;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets{
+    text-align: right;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 2px;
+}
+
+
+.swiper-pagination-bullet {
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    background: transparent;
+    opacity:1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.loction{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background: #fff;
+}
+.dwbox{
+    display: block;
+    width: 60px;
+    height: 15px;
+    background: url(//static-o2o.360buyimg.com/daojia/new/images/index/index_icon_301.png) no-repeat;
+    -webkit-background-size: 60px 240px;
+    background-size: 60px 240px;
+    background-position: 0 -65px;
+    margin: 0 auto -20px auto;
+    position: relative;
+    top: -15px;
+    z-index: 8;
+}
+.dwimg{
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background: url(//static-o2o.360buyimg.com/daojia/new/images/index/index_icon_301.png) no-repeat;
+    -webkit-background-size: 60px 240px;
+    background-size: 60px 240px;
+    background-position: -22px -93px;
+    top: 5px;
+    position: relative;
+}
+.dwtextbox1{
+    width: 100%;
+
+}
+
+.dwtextbox{
+    min-width: 64%;
+    margin: 0 auto;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background: rgba(199,199,199,0.4);
+    display: inline-block;
+}
+.dwtext{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 60%;
+    margin-right: 5px;
+
+}
+.ballNum4{
+    display: flex;
+    padding: 5px;
+    background: #fff;
+    text-align: center;
+}
+.ballNum4 a{
+    -webkit-flex-grow:1;
+    flex-grow:1;
+    font-size: 12px;
+    color: #666;
+}
+.ballNum4 a img{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.banner2{
+    background: #fff;
+    margin: 2%;
+}
+.banner2 img{
+    width: 100%;
+}
+
+.triple{
+    display: flex;
+}
+.miaoSha a b{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.triple img{
+    width: 64px;
+    height: 64px;
+}
+.triple .tl{
+    -webkit-flex-grow:1;
+    flex-grow:1;
+    background: #fff;
+}
+
+.triple .num2{
+    margin: 0 2px;
+}
+.container{
+    padding-bottom: 75px;
+}
+.miaoSha a span{
+    display: block;
+    text-align: center;
+    color: #ff546c;
+}
+.miaoSha a .banner3{
+    position: relative;
+}
+.miaoSha a .banner3 img{
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto auto -64px;
+}
+
+.conmon span{
+    display: block;
+    text-align: center;
+}
+.conmon a img{
+    display: block;
+    margin: 7px auto;
+}
+
+.triple-icon3{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(//static-o2o.360buyimg.com/daojia/new/images/index/index_icon24.png) no-repeat;
+    background-size: 20px 390px;
+    position: relative;
+    top: 5px;
+
+
+}
+.num1 .num1-1{
+    background-position: 0 -271px;
+}
+.num2 .num2-1{
+    background-position: 0 -210px;
+}
+.num3 .num3-1{
+    background-position: 0 -240px;
+}
+.num2 .bt1{
+    color: #ff7d3c;
+}
+.num3 .bt2{
+    color: #66bd2b;
+}
+.conmon .tq{
+    width: 100%;
+    margin: auto;
+    font-size: 12px;
+    height: 14px;
+    color: #333;
+}
+.triple .bt1,.triple .bt2,.triple .bt3{
+    margin-bottom: 3px;
+}
+
+.miaoSha b,.conmon .tq{
+    margin-bottom: 3px;
+}
+
+.miaoSha .time i{
+    display: inline-block;
+    background: #666666;
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 5px;
+    color: #fff;
+}
+.b8{
+    display: flex;
+    background: #fff;
+    margin-top: 3px;
+    padding-bottom: 20px;
+
+}
+.b8 a{
+    flex-grow:1;
+    position: relative;
+}
+.b8 a{
+    margin-top: 20px;
+}
+.b8 a span{
+    font-size: 12px;
+    color: #b3b0ab;
+}
+.b8 a p{
+    font-size: 15px;
+}
+.b8 a .pc1{
+    color: #67bf58;
+}
+.b8 a .pc2{
+    color: #f1566e;
+}
+
+.b8 img{
+    width: 55px;
+    height: 55px;
+    float: right;
+    position: absolute;
+    right: 16px;
+    top: -9px;
+}
+
+/*
+分类
+
+*/
+
+.u2{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 45px;
+    color: #555;
+    font-size: 17px;
+    text-align: center;
+    line-height: 44px;
+    background-color: #fff;
+    transform: translateZ(0);
+}
+.u10{
+    position: fixed;
+    left: 0;
+    top: 45px;
+    bottom: 50px;
+    width: 90px;
+    z-index: 2;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #f8f8f8;
+}
+
+.u9 .u10 .um {
+    padding-left: 11px;
+    color: #47b34f;
+    background-color: #FFF;
+    border-left: 3px solid #47b34f;
+    border-right-color: #FFF;
+}
+
+
+.u10 .ul{
+    height: 43px;
+    padding-left: 14px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #666666;
+    white-space: nowrap;
+    border-bottom: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    background-color: #f8f8f8;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.uk{
+    padding:0 0 0 95px;
+    margin-top:45px;
+    background: #fff;
+
+}
+
+
+
+
+
+.nearshop{
+    font-size: 14px;
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #70704e;
+    text-align: center;
+    position: relative;
+    margin: 10px auto;
+}
+
+.nearshop:before {
+    content: '';
+    height: 1px;
+    border-top: 1px solid #DEDEDE;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 10%;
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+
+.nearshop span {
+    position: relative;
+    padding: 0 10px;
+    background-color: #F4F4F4;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color: #666666;
+}
+
+.nsi{
+    display: inline-block;
+    background: url(//static-o2o.360buyimg.com/daojia/new/images/index/index_shop_list.png) no-repeat;
+    width: 27px;
+    height: 25px;
+    background-position: 0px 0px;
+    background-size: 25px 60px;
+    vertical-align: top;
+    position: relative;
+}
+
+
+/*
+    商品list
+*/
+
+.shoplist{
+    margin: 0 5px;
+}
+
+.shoplist .shopli{
+    padding: 10px 10px 5px 10px;
+    min-height: 70px;
+    border: 1px solid #e7e9e4;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: #fff;
+}
+
+.br {
+    position: relative;
+    font-size: 0;
+    min-height: 55px;
+    padding-bottom: 5px;
+}
+
+.bl {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    display: inline-block;
+}
+
+.bm {
+    font-size: 12px;
+    color: #666;
+    margin-left: 60px;
+}
+
+.bm h2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 58%;
+    margin-top: 1px;
+}
+
+.bn {
+    font-size: 0;
+    height: 15px;
+    overflow: hidden;
+    margin: 2px 0 6px 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bn i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(//static-o2o.360buyimg.com/daojia/new/images/index/index.png) -1px 0px no-repeat;
+    background-size: 15px 200px;
+}
+
+.cb {
+    font-size: 11px;
+    line-height: 11px;
+    height: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666666;
+}
+
+.bs {
+    width: 78px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 30px;
+    font-size: 0px;
+    text-align: right;
+}
+
+.d4 {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(//static-o2o.360buyimg.com/daojia/new/images/index/index_icon_301.png) no-repeat;
+    -webkit-background-size: 60px 240px;
+    background-size: 60px 240px;
+    background-position: -13px -174px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin-top: 13px;
+}
